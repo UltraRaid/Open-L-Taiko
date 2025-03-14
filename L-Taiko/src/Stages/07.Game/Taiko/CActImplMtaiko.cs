@@ -211,10 +211,16 @@ internal class CActImplMtaiko : CActivity {
 					OpenTaiko.Tx.Taiko_Don_Left.Opacity = getMTaikoOpacity(this.stパッド状態[2 + playerShift].n明るさ);
 					OpenTaiko.Tx.Taiko_Don_Right.Opacity = getMTaikoOpacity(this.stパッド状態[3 + playerShift].n明るさ);
 
-					OpenTaiko.Tx.Taiko_Ka_Left.t2D描画(taiko_x, taiko_y, new Rectangle(0, 0, OpenTaiko.Tx.Taiko_Ka_Right.szTextureSize.Width / 2, OpenTaiko.Tx.Taiko_Ka_Right.szTextureSize.Height));
-					OpenTaiko.Tx.Taiko_Ka_Right.t2D描画(taiko_x + OpenTaiko.Tx.Taiko_Ka_Right.szTextureSize.Width / 2, taiko_y, new Rectangle(OpenTaiko.Tx.Taiko_Ka_Right.szTextureSize.Width / 2, 0, OpenTaiko.Tx.Taiko_Ka_Right.szTextureSize.Width / 2, OpenTaiko.Tx.Taiko_Ka_Right.szTextureSize.Height));
-					OpenTaiko.Tx.Taiko_Don_Left.t2D描画(taiko_x, taiko_y, new Rectangle(0, 0, OpenTaiko.Tx.Taiko_Ka_Right.szTextureSize.Width / 2, OpenTaiko.Tx.Taiko_Ka_Right.szTextureSize.Height));
-					OpenTaiko.Tx.Taiko_Don_Right.t2D描画(taiko_x + OpenTaiko.Tx.Taiko_Ka_Right.szTextureSize.Width / 2, taiko_y, new Rectangle(OpenTaiko.Tx.Taiko_Ka_Right.szTextureSize.Width / 2, 0, OpenTaiko.Tx.Taiko_Ka_Right.szTextureSize.Width / 2, OpenTaiko.Tx.Taiko_Ka_Right.szTextureSize.Height));
+					// DonとKaを卍解
+					int donLeftX = taiko_x;
+					int donRightX = taiko_x + OpenTaiko.Tx.Taiko_Don_Right.szTextureSize.Width / 300;
+					int kaLeftX = taiko_x;
+					int kaRightX = taiko_x + OpenTaiko.Tx.Taiko_Ka_Right.szTextureSize.Width / 300;
+
+					OpenTaiko.Tx.Taiko_Ka_Left.t2D描画(kaLeftX, taiko_y);
+					OpenTaiko.Tx.Taiko_Ka_Right.t2D描画(kaRightX, taiko_y);
+					OpenTaiko.Tx.Taiko_Don_Left.t2D描画(donLeftX, taiko_y);
+					OpenTaiko.Tx.Taiko_Don_Right.t2D描画(donRightX, taiko_y);
 				}
 			} else if (_gt == EGameType.Konga) {
 				if (OpenTaiko.Tx.Taiko_Konga_Clap != null && OpenTaiko.Tx.Taiko_Konga_Don != null && OpenTaiko.Tx.Taiko_Konga_Ka != null) {

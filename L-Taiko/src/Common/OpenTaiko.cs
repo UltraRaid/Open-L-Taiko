@@ -1813,7 +1813,11 @@ internal class OpenTaiko : Game {
 		#endregion
 
 		#region [ Discord Rpc initialisation]
+		#if DEBUG
 		DiscordClient = new DiscordRpcClient("1348981385213247488");
+		#else
+		DiscordClient = new DiscordRpcClient("1343018788991537225");
+		#endif
 		DiscordClient?.Initialize();
 		StartupTime = DateTime.UtcNow;
 		DiscordClient?.SetPresence(new RichPresence() {

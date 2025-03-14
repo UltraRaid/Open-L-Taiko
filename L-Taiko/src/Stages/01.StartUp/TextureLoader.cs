@@ -466,10 +466,10 @@ class TextureLoader {
 		Taiko_Base[0] = TxC(GAME + TAIKO + @$"Base.png");
 		Taiko_Base[1] = TxC(GAME + TAIKO + @$"Base_Konga.png");
 
-		Taiko_Don_Left = TxC(GAME + TAIKO + @$"Don.png");
-		Taiko_Don_Right = TxC(GAME + TAIKO + @$"Don.png");
-		Taiko_Ka_Left = TxC(GAME + TAIKO + @$"Ka.png");
-		Taiko_Ka_Right = TxC(GAME + TAIKO + @$"Ka.png");
+		Taiko_Don_Left = TxC(GAME + TAIKO + @$"Don_Left.png");
+		Taiko_Don_Right = TxC(GAME + TAIKO + @$"Don_Right.png");
+		Taiko_Ka_Left = TxC(GAME + TAIKO + @$"Ka_Left.png");
+		Taiko_Ka_Right = TxC(GAME + TAIKO + @$"Ka_Right.png");
 
 		Taiko_Konga_Don = TxC(GAME + TAIKO + @$"Don_Konga.png");
 		Taiko_Konga_Ka = TxC(GAME + TAIKO + @$"Ka_Konga.png");
